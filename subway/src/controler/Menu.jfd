@@ -1,0 +1,49 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:167:p, comp label1:::p:331:p, space ::165:x}, seq l {space :p:76:p, par l:::p {comp button1::::194:x, comp button3::::194:x}, space ::128:x, par l:::p {comp button2::::194:x, comp button4::::194:x}, space ::71:x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp label1:::p:80:p, space s:::p, par b {comp button1::b:p:113:p, comp button2::b:p:113:p}, space :p:36:p, par b {comp button3::b:p:121:p, comp button4::b:p:123:p}, space ::62:x}}"
+		} ) {
+			name: "this"
+			"title": "Menu"
+			"background": new java.awt.Color( 51, 204, 255, 255 )
+			"foreground": sfield java.awt.Color pink
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "武汉地铁查询系统"
+				"font": new java.awt.Font( "楷体", 3, 26 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "所有站点及线路"
+				"font": new java.awt.Font( "楷体", 3, 19 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "站点查询"
+				"font": new java.awt.Font( "楷体", 3, 19 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button2MouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "线路查询"
+				"font": new java.awt.Font( "楷体", 3, 19 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button3MouseClicked", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button4"
+				"text": "我要出发！"
+				"font": new java.awt.Font( "楷体", 3, 19 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button4MouseClicked", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 40 )
+			"size": new java.awt.Dimension( 665, 470 )
+		} )
+	}
+}

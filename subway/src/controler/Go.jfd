@@ -1,0 +1,71 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_152-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :217:217:p, comp label1:::p:298:p}, seq l {space :p:61:p, par t {comp label2:::p:135:p, comp label3:::p:135:p}, space :p:66:p, par t {comp textField1:::p:245:p, comp textField2:::p:245:p}, space :p:86:p, comp button1:::p::p}, seq l {space :p:61:p, comp scrollPane2:::p:624:p}, seq l {space :p:61:p, comp scrollPane1:::p:624:p}, seq l {space :p:240:p, comp label4:::p:233:p}, seq l {space :p:255:p, comp label5:::p:201:p}}, space ::103:x}}"
+			"$verticalGroup": "par l {seq l {space :p:16:p, comp label1:::p:39:p, par l {seq l {space u:::p, par l {comp label2::::43:x, comp textField1::::43:x}, space u:::p, par b {comp textField2::b:p:38:p, comp label3::b:p:30:p}, space :::p, comp label4:::p:27:p, space :p:6:p}, seq l {space :p:28:p, comp button1:::p:38:p, space ::78:x}}, comp scrollPane1:::p:135:p, space :::p, comp label5:::p:26:p, space u:::p, comp scrollPane2:::p:147:p, space :p:28:p}}"
+		} ) {
+			name: "this"
+			"title": "Go"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Go Go Go !!!!"
+				"font": new java.awt.Font( "楷体", 3, 24 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "出发地"
+				"font": new java.awt.Font( "楷体", 3, 22 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "目的地"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "楷体", 3, 22 )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "查询"
+				"font": new java.awt.Font( "楷体", 3, 22 )
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "button1MouseClicked", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea1"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "最少换乘"
+				"font": new java.awt.Font( "楷体", 3, 22 )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "最少停靠"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "楷体", 3, 22 )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane2"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "textArea2"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 135, 0 )
+			"size": new java.awt.Dimension( 790, 585 )
+		} )
+	}
+}
