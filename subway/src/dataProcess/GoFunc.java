@@ -47,32 +47,43 @@ public class GoFunc {
     public void initArr() {
 
         //arr1初始化
+//        for (int i = 1; i <= n; i++) {
+//            for (int j = 1; j <= n; j++) {
+//                arr1[i][j] = max;
+//                if (i == j) {
+//                    arr1[i][j] = 0;
+//                    continue;
+//                }
+//                for (String routeName : routeNameList) {
+//                    List<Integer> routeList = route.get(routeName);
+//                    for (int k = 0; k < routeList.size() - 1; k++) {
+//                        if (routeList.get(k) == i && routeList.get(k + 1) == j) {
+//                            arr1[i][j] = 1;
+//                            arr1[j][i] = 1;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+
+        //arr1初始化
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                arr1[i][j] = max;
-                if (i == j) {
+                if (i == j)
                     arr1[i][j] = 0;
-                    continue;
-                }
-                for (String routeName : routeNameList) {
-                    List<Integer> routeList = route.get(routeName);
-                    for (int k = 0; k < routeList.size() - 1; k++) {
-                        if (routeList.get(k) == i && routeList.get(k + 1) == j) {
-                            arr1[i][j] = 1;
-                            arr1[j][i] = 1;
-                        }
-                    }
-                }
+                else
+                    arr1[i][j] = max;
             }
         }
-        //输出arr1
-//        for (int i = 1; i <= n; i++) {
-//            System.out.println(i);
-//            for (int j = 1; j <= n; j++) {
-//                System.out.print(arr1[i][j] + "");
-//            }
-//            System.out.println();
-//        }
+        for (String routeName : routeNameList) {
+            List<Integer> routeList = route.get(routeName);
+            for (int i = 0; i < routeList.size() - 1; i++) {
+                int a = routeList.get(i);
+                int b = routeList.get(i + 1);
+                arr1[a][b] = 1;
+                arr1[b][a] = 1;
+            }
+        }
 
         //初始化arr2
         //arr2中的list放起始点
@@ -80,7 +91,6 @@ public class GoFunc {
             for (int j = 1; j <= n; j++) {
                 arr2[i][j] = new ArrayList();
                 arr2[i][j].add(i);
-                arr2[i][j].add(j);
             }
         }
 
@@ -91,15 +101,15 @@ public class GoFunc {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
                 for (int k = 1; k <= n; k++) {
-                    int distance = arr1[i][k] + arr1[k][j];
+                    int distance = arr1[j][i] + arr1[i][k];
 
                     List<Integer> x = new ArrayList<>();
-                    x.addAll(arr2[i][k]);
+                    x.addAll(arr2[j][i]);
                     List<Integer> y = new ArrayList<>();
-                    y.addAll(arr2[k][j]);
+                    y.addAll(arr2[i][k]);
                     // x y 为完整线路 即包括起始站和终点站
-//                    x.add(k);
-//                    y.add(j);
+                    x.add(i);
+                    y.add(k);
                     //判断是否换乘
                     Integer a = x.get(x.size() - 2);
                     Integer b = x.get(x.size() - 1);
@@ -108,14 +118,13 @@ public class GoFunc {
                     if (flag)
                         distance++;
 
-                    if (distance < arr1[i][j]) {
-                        arr1[i][j] = distance;
+                    if (distance < arr1[j][k]) {
+                        arr1[j][k] = distance;
                         List<Integer> list = new ArrayList<>();
+                        list.addAll(arr2[j][i]);
                         list.addAll(arr2[i][k]);
-                        list.remove(list.size()-1);
-                        list.addAll(arr2[k][j]);
-                        arr2[i][j].clear();
-                        arr2[i][j].addAll(list);
+                        arr2[j][k].clear();
+                        arr2[j][k].addAll(list);
                     }
                 }
 //                System.out.print(i + " " + j + " ");
@@ -127,7 +136,7 @@ public class GoFunc {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
 
-                System.out.print(arr1[i][j] + "  ");
+                System.out.print(i + " " + j + " " + arr1[i][j] + "  ");
                 for (int k = 0; k < arr2[i][j].size(); k++) {
                     System.out.print(arr2[i][j].get(k) + "-");
                 }
