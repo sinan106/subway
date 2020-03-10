@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="重新写线路查询">
-      <change afterPath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" afterDir="false" />
+    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="初始化两个表">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/Go$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/Go.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/production/subway/dataProcess/Function.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/production/subway/dataProcess/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +183,7 @@
       <workItem from="1582943305231" duration="145000" />
       <workItem from="1583464036830" duration="889000" />
       <workItem from="1583470542124" duration="607000" />
-      <workItem from="1583805417869" duration="6187000" />
+      <workItem from="1583805417869" duration="13281000" />
     </task>
     <task id="LOCAL-00001" summary="重新写线路查询">
       <created>1583806560167</created>
@@ -197,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583806560167</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="初始化两个表">
+      <created>1583814650717</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583814650717</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -227,7 +229,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="重新写线路查询" />
-    <option name="LAST_COMMIT_MESSAGE" value="重新写线路查询" />
+    <MESSAGE value="初始化两个表" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化两个表" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
