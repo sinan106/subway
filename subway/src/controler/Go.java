@@ -6,6 +6,7 @@ package controler;
 
 import java.awt.event.*;
 
+import dataProcess.GoFunc;
 import dataProcess.Graph;
 
 import java.awt.*;
@@ -13,6 +14,7 @@ import java.util.*;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.GroupLayout;
+
 
 /**
  * @author 1
@@ -31,80 +33,8 @@ public class Go extends JFrame {
         route = route1;
         routeNameList = routeNameList1;
 
-
         initComponents();
-      //  initialGraph();
-//        outputGraph(graph);
     }
-
-//    //建图
-//    public void initialGraph() {
-//
-//        for (Integer x : station.keySet())
-//            verNum++;
-//        for (String y : route.keySet()) {
-//            List<Integer> edgeList = route.get(y);
-//            edgeNum += edgeList.size() - 1;
-//        }
-//        // verNum 210  edgeNum 230
-//
-//        graph = new Graph(verNum, edgeNum);
-//
-//        // 建起始点
-//        int i = 0;
-//        for (Integer x : station.keySet()) {
-//            Vertex vertex = new Vertex();
-//            vertex.setName(station.get(x));
-//            graph.vertex[i] = vertex;
-//            i++;
-//        }
-//
-//        //建边
-//        for (String routeName : routeNameList) {
-//
-//            List<Integer> routeList = route.get(routeName);
-//
-//
-//            for (i = 0; i < routeList.size() - 1; i++) {
-//                Integer x = routeList.get(i);  // i的编号
-//                Integer y = routeList.get(i + 1); // i+1的编号
-//                // v1 是前一个点 v2是v1 后一个点
-//                Vertex v1 = graph.getVertex(station.get(x));
-//
-//                Vertex v2 = new Vertex();
-//                v2.setName(station.get(y));
-//                // v2.vertexList.add(v1.getNextVertex());
-//                // v2.setNextVertex(v1.getNextVertex());
-//                v1.vertexList.add(v2);
-//                //v1.setNextVertex(v2);
-//
-//                Vertex rev1 = graph.getVertex(station.get(y));
-//                Vertex rev2 = new Vertex();
-//                rev2.setName(station.get(x));
-//                //rev2.vertexList.add(rev1.getNextVertex());
-//                //rev2.setNextVertex(rev1.getNextVertex());
-//                rev1.vertexList.add(rev2);
-//                //rev1.setNextVertex(rev2);
-//
-//            }
-//        }
-//    }
-
-//    输出图的邻接表
-//    public void outputGraph(Graph graph) {
-//        for (int i = 0; i < graph.getVerNum(); i++) {
-//            Vertex v1 = graph.vertex[i];
-//            System.out.print(v1.getName());
-//            Vertex v2 = v1.getNextVertex();
-//
-//            while (v2 != null){
-//                System.out.print("-->" + v2.getName());
-//                v2 = v2.getNextVertex();
-//            }
-//            System.out.println();
-//        }
-//    }
-
 
     private void button1MouseClicked(MouseEvent e) {
         //检查输入的地名是否正确
@@ -137,16 +67,14 @@ public class Go extends JFrame {
             textField1.setText("");
         }
 
-        if(flag1&&flag2){
+        if (flag1 && flag2) {
             String dep = textField1.getText();
-            String des = textField2.getUIClassID();
-
+            String des = textField2.getText();
         }
-
     }
 
     private void initComponents() {
-        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+
         label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
@@ -276,6 +204,9 @@ public class Go extends JFrame {
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
+
+    // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
+
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JLabel label1;

@@ -31,40 +31,21 @@ public class GoFunc {
     private Integer n;
     private Integer max = 1000;
 
-    public GoFunc() throws IOException {
-        routeNameList = preProcess("static/station.txt", station, "static/route.txt", route);
+    public List Func(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1){
+        routeNameList = routeNameList1;
+        station = station1;
+        route = route1;
         n = station.size();
         arr1 = new Integer[n + 1][n + 1];
         arr2 = new ArrayList[n + 1][n + 1];
         initArr();
         process();
+
+        return null;
     }
 
-    public static void main(String[] args) throws IOException {
-        new GoFunc();
-    }
 
     public void initArr() {
-
-        //arr1初始化
-//        for (int i = 1; i <= n; i++) {
-//            for (int j = 1; j <= n; j++) {
-//                arr1[i][j] = max;
-//                if (i == j) {
-//                    arr1[i][j] = 0;
-//                    continue;
-//                }
-//                for (String routeName : routeNameList) {
-//                    List<Integer> routeList = route.get(routeName);
-//                    for (int k = 0; k < routeList.size() - 1; k++) {
-//                        if (routeList.get(k) == i && routeList.get(k + 1) == j) {
-//                            arr1[i][j] = 1;
-//                            arr1[j][i] = 1;
-//                        }
-//                    }
-//                }
-//            }
-//        }
 
         //arr1初始化
         for (int i = 1; i <= n; i++) {
@@ -127,10 +108,7 @@ public class GoFunc {
                         arr2[j][k].addAll(list);
                     }
                 }
-//                System.out.print(i + " " + j + " ");
-//                System.out.println(arr2[i][j]);
             }
-            // System.out.println(i);
         }
 
         for (int i = 1; i <= n; i++) {

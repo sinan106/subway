@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="循环有误">
+    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="基本完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/Go.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Go.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/station.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/station.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/邻接表.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GoFunc">
+  <component name="RunManager" selected="Application.main">
     <configuration name="GoFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dataProcess.GoFunc" />
       <module name="subway" />
@@ -153,8 +156,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GoFunc" />
         <item itemvalue="Application.main" />
+        <item itemvalue="Application.GoFunc" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.Menu" />
         <item itemvalue="Application.importData" />
@@ -184,7 +187,8 @@
       <workItem from="1582943305231" duration="145000" />
       <workItem from="1583464036830" duration="889000" />
       <workItem from="1583470542124" duration="607000" />
-      <workItem from="1583805417869" duration="17593000" />
+      <workItem from="1583805417869" duration="18776000" />
+      <workItem from="1583836026063" duration="555000" />
     </task>
     <task id="LOCAL-00001" summary="重新写线路查询">
       <created>1583806560167</created>
@@ -207,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583829717404</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="基本完成">
+      <created>1583834996513</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1583834996513</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -239,28 +250,8 @@
     <MESSAGE value="重新写线路查询" />
     <MESSAGE value="初始化两个表" />
     <MESSAGE value="循环有误" />
-    <option name="LAST_COMMIT_MESSAGE" value="循环有误" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dataProcess/GoFunc.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dataProcess/GoFunc.java</url>
-          <line>144</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/dataProcess/GoFunc.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="基本完成" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
