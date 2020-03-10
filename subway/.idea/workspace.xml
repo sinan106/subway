@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="">
+    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="重新写线路查询">
+      <change afterPath="$PROJECT_DIR$/src/dataProcess/GoFunc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controler/Go.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Go.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataProcess/Function.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataProcess/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/Go$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/Go.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/Go.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/controler/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/output/production/subway/controler/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/dataProcess/Function.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/production/subway/dataProcess/Node.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +29,7 @@
   <component name="ProjectId" id="1YCJG74tRN8TbrgKMaBOVXjK2bh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="G:/领航/武科大助手3.0/wusthelper-master 本地" />
@@ -49,7 +53,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.GoFunc">
+    <configuration name="GoFunc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dataProcess.GoFunc" />
+      <module name="subway" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dataProcess.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controler.Menu" />
       <module name="subway" />
@@ -135,9 +153,11 @@
       <item itemvalue="Application.main" />
       <item itemvalue="Application.Menu" />
       <item itemvalue="Application.test" />
+      <item itemvalue="Application.GoFunc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GoFunc" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.test" />
         <item itemvalue="Application.Menu" />
@@ -168,8 +188,16 @@
       <workItem from="1582943305231" duration="145000" />
       <workItem from="1583464036830" duration="889000" />
       <workItem from="1583470542124" duration="607000" />
-      <workItem from="1583805417869" duration="798000" />
+      <workItem from="1583805417869" duration="6187000" />
     </task>
+    <task id="LOCAL-00001" summary="重新写线路查询">
+      <created>1583806560167</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583806560167</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -196,6 +224,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="重新写线路查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="重新写线路查询" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
