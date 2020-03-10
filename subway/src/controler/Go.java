@@ -7,8 +7,6 @@ package controler;
 import java.awt.event.*;
 
 import dataProcess.Graph;
-import dataProcess.Vertex;
-import dataProcess.Function;
 
 import java.awt.*;
 import java.util.*;
@@ -143,7 +141,6 @@ public class Go extends JFrame {
             String dep = textField1.getText();
             String des = textField2.getUIClassID();
 
-            Function function = new Function(dep, des, station, route, routeNameList);
         }
 
     }

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="" />
+    <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/Go.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Go.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataProcess/Function.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataProcess/Node.java" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +20,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1YCJG74tRN8TbrgKMaBOVXjK2bh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/领航/武科大助手3.0/wusthelper-master 本地" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -156,6 +165,10 @@
       <workItem from="1582596435974" duration="95000" />
       <workItem from="1582598843273" duration="6763000" />
       <workItem from="1582610798811" duration="3543000" />
+      <workItem from="1582943305231" duration="145000" />
+      <workItem from="1583464036830" duration="889000" />
+      <workItem from="1583470542124" duration="607000" />
+      <workItem from="1583805417869" duration="798000" />
     </task>
     <servers />
   </component>
@@ -170,6 +183,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

@@ -18,8 +18,6 @@ public class main {
         routeNameList = preProcess("static/station.txt", station, "static/route.txt", route);
 
 
-
-
         Menu frame = new Menu(station, route, routeNameList);
         frame.setVisible(true);
     }
