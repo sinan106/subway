@@ -31,7 +31,7 @@ public class GoFunc {
     private Integer n;
     private Integer max = 1000;
 
-    public List Func(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1){
+    public GoFunc(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1){
         routeNameList = routeNameList1;
         station = station1;
         route = route1;
@@ -40,8 +40,6 @@ public class GoFunc {
         arr2 = new ArrayList[n + 1][n + 1];
         initArr();
         process();
-
-        return null;
     }
 
 
@@ -110,20 +108,9 @@ public class GoFunc {
                 }
             }
         }
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-
-                System.out.print(i + " " + j + " " + arr1[i][j] + "  ");
-                for (int k = 0; k < arr2[i][j].size(); k++) {
-                    System.out.print(arr2[i][j].get(k) + "-");
-                }
-                System.out.println();
-            }
-        }
     }
 
-    //判断是否换乘
+    //判断是否换乘 换乘权值加一
     public boolean Switch(Integer a, Integer b, Integer c) {
 
         String route1 = null;
@@ -148,5 +135,12 @@ public class GoFunc {
 
 
         return route1 != null && route1.equals(route2);
+    }
+
+    public List<Integer> go (Integer dep, Integer des) {
+        List<Integer> list = new ArrayList<>();
+        list.addAll(arr2[dep][des]);
+        list.add(des);
+        return list;
     }
 }

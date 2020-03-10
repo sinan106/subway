@@ -22,21 +22,3 @@ public class main {
         frame.setVisible(true);
     }
 }
-
-
-
-//    String content = "";
-//            for (int i = 0; i < routeNameList.size(); i++) {
-//        String routeName = routeNameList.get(i);
-//        content += routeName;
-//        content += " : ";
-//        List<Integer> stationList = route.get(routeName);
-//        for (int x : stationList) {
-//        String name = station.get(x);
-//        content += name;
-//        content += "-->";
-//        }
-//        content = content.substring(0,content.length()-3);
-//        content += "\n";
-//        textArea1.setText(content);
-//        }

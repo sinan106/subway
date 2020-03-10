@@ -4,6 +4,8 @@
 
 package controler;
 
+import dataProcess.GoFunc;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.List;
@@ -19,6 +21,7 @@ class Menu extends JFrame {
     public Map<Integer, String> station;
     public Map<String, List<Integer>> route;
     public List<String> routeNameList;
+    GoFunc goFunc;
 
     public Menu(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeList1) {
         station = station1;

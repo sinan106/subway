@@ -7,7 +7,6 @@ package controler;
 import java.awt.event.*;
 
 import dataProcess.GoFunc;
-import dataProcess.Graph;
 
 import java.awt.*;
 import java.util.*;
@@ -24,9 +23,7 @@ public class Go extends JFrame {
     private Map<Integer, String> station;
     private Map<String, List<Integer>> route;
     private List<String> routeNameList;
-    private Graph graph;
-    private Integer verNum = 0;
-    private Integer edgeNum = 0;
+    private GoFunc goFunc;
 
     public Go(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1) {
         station = station1;
@@ -36,19 +33,23 @@ public class Go extends JFrame {
         initComponents();
     }
 
+
     private void button1MouseClicked(MouseEvent e) {
         //检查输入的地名是否正确
         String departure = textField1.getText();
         String destination = textField2.getText();
-
+        Integer dep = null;
+        Integer des = null;
         boolean flag1 = false;
         boolean flag2 = false;
 
         for (Integer x : station.keySet()) {
             if (station.get(x).equals(departure)) {
+                dep = x;
                 flag1 = true;
             }
             if (station.get(x).equals(destination)) {
+                des = x;
                 flag2 = true;
             }
             if (flag1 && flag2)
@@ -64,17 +65,76 @@ public class Go extends JFrame {
             textField1.setText("");
         } else if (!flag2) {
             JOptionPane.showMessageDialog(null, "查找不到此目的地，请重新输入");
-            textField1.setText("");
+            textField2.setText("");
         }
 
         if (flag1 && flag2) {
-            String dep = textField1.getText();
-            String des = textField2.getText();
+
+            String content = "";
+            String Switch = "";
+
+            List<Integer> list = goFunc.go(dep, des);
+
+            for (int i = 0; i < list.size() - 1; i++) {
+
+                String name = station.get(list.get(i));
+                content += name;
+
+                if ((i + 1) % 4 == 0)
+                    content += "\n";
+
+                content += "-->";
+
+            }
+            content += station.get(list.get(list.size() - 1)) + "\n";
+
+
+
+            for (int i = 1; i < list.size()-1; i++) {
+
+                String route1 = null;
+                String route2 = null;
+
+                Integer a = list.get(i-1);
+                Integer b = list.get(i);
+                Integer c = list.get(i+1);
+
+                for (String routeName : routeNameList) {
+                    List<Integer> list1 = route.get(routeName);
+                    for (int j = 0; j < list1.size() - 1; j++) {
+                        if (list1.get(j).equals(a) && list1.get(j + 1).equals(b)) {
+                            route1 = routeName;
+                        } else if (list1.get(j).equals(b) && list1.get(j + 1).equals(a)) {
+                            route1 = routeName;
+                        } else if (list1.get(j).equals(b) && list1.get(j + 1).equals(c)) {
+                            route2 = routeName;
+                        } else if (list1.get(j).equals(c) && list1.get(j + 1).equals(b)) {
+                            route2 = routeName;
+                        }
+                    }
+                    if (route1 != null && route2 != null)
+                        break;
+                }
+
+                if (!route1.equals(route2)) {
+                    Switch += "于 " + station.get(b) + " 从 " + route1 +" 换到 " + route2 + "\n";
+                }
+
+            }
+            content += Switch;
+
+            textArea1.setText(content);
         }
+
+    }
+
+    private void thisWindowOpened(WindowEvent e) {
+        goFunc = new GoFunc(station, route, routeNameList);
     }
 
     private void initComponents() {
 
+        // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         label1 = new JLabel();
         label2 = new JLabel();
         label3 = new JLabel();
@@ -84,12 +144,15 @@ public class Go extends JFrame {
         scrollPane1 = new JScrollPane();
         textArea1 = new JTextArea();
         label4 = new JLabel();
-        label5 = new JLabel();
-        scrollPane2 = new JScrollPane();
-        textArea2 = new JTextArea();
 
         //======== this ========
         setTitle("Go");
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+                thisWindowOpened(e);
+            }
+        });
         Container contentPane = getContentPane();
 
         //---- label1 ----
@@ -107,6 +170,12 @@ public class Go extends JFrame {
         label3.setHorizontalAlignment(SwingConstants.CENTER);
         label3.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
 
+        //---- textField1 ----
+        textField1.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
+
+        //---- textField2 ----
+        textField2.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
+
         //---- button1 ----
         button1.setText("\u67e5\u8be2");
         button1.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
@@ -119,93 +188,76 @@ public class Go extends JFrame {
 
         //======== scrollPane1 ========
         {
+
+            //---- textArea1 ----
+            textArea1.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
             scrollPane1.setViewportView(textArea1);
         }
 
         //---- label4 ----
-        label4.setText("\u6700\u5c11\u6362\u4e58");
-        label4.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
+        label4.setText("\u63a8\u8350\u7ebf\u8def");
         label4.setHorizontalAlignment(SwingConstants.CENTER);
-
-        //---- label5 ----
-        label5.setText("\u6700\u5c11\u505c\u9760");
-        label5.setHorizontalAlignment(SwingConstants.CENTER);
-        label5.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 22));
-
-        //======== scrollPane2 ========
-        {
-            scrollPane2.setViewportView(textArea2);
-        }
+        label4.setFont(new Font("\u6977\u4f53", Font.BOLD | Font.ITALIC, 24));
 
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
-                contentPaneLayout.createParallelGroup()
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(217, 217, 217)
-                                                .addComponent(label1, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(61, 61, 61)
-                                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(label2, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(label3, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE))
-                                                .addGap(66, 66, 66)
-                                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
-                                                        .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE))
-                                                .addGap(86, 86, 86)
-                                                .addComponent(button1))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(61, 61, 61)
-                                                .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 624, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(61, 61, 61)
-                                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 624, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(240, 240, 240)
-                                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 233, GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(255, 255, 255)
-                                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 201, GroupLayout.PREFERRED_SIZE)))
-                                .addContainerGap(103, Short.MAX_VALUE))
+                            .addGap(217, 217, 217)
+                            .addComponent(label1, GroupLayout.PREFERRED_SIZE, 298, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(61, 61, 61)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                .addComponent(label2, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE))
+                            .addGap(66, 66, 66)
+                            .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.TRAILING)
+                                .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 245, GroupLayout.PREFERRED_SIZE))
+                            .addGap(86, 86, 86)
+                            .addComponent(button1))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(284, 284, 284)
+                            .addComponent(label4, GroupLayout.PREFERRED_SIZE, 177, GroupLayout.PREFERRED_SIZE))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(110, 110, 110)
+                            .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 561, GroupLayout.PREFERRED_SIZE)))
+                    .addContainerGap(147, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
-                contentPaneLayout.createParallelGroup()
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
+                    .addGroup(contentPaneLayout.createParallelGroup()
                         .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addGap(16, 16, 16)
-                                .addComponent(label1, GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE)
-                                .addGroup(contentPaneLayout.createParallelGroup()
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(contentPaneLayout.createParallelGroup()
-                                                        .addComponent(label2, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                                                        .addComponent(textField1, GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(label3, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(label4, GroupLayout.PREFERRED_SIZE, 27, GroupLayout.PREFERRED_SIZE)
-                                                .addGap(6, 6, 6))
-                                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                                .addGap(28, 28, 28)
-                                                .addComponent(button1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)))
-                                .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 135, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(label5, GroupLayout.PREFERRED_SIZE, 26, GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(scrollPane2, GroupLayout.PREFERRED_SIZE, 147, GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28))
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(label2, GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)
+                                .addGroup(contentPaneLayout.createSequentialGroup()
+                                    .addComponent(textField1, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 7, Short.MAX_VALUE)))
+                            .addGap(18, 18, 18)
+                            .addGroup(contentPaneLayout.createParallelGroup()
+                                .addComponent(label3, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(textField2, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addComponent(label4))
+                        .addGroup(contentPaneLayout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(button1, GroupLayout.PREFERRED_SIZE, 38, GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)))
+                    .addGap(18, 18, 18)
+                    .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 203, GroupLayout.PREFERRED_SIZE)
+                    .addGap(32, 32, 32))
         );
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
     }
-
-    // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
@@ -218,8 +270,5 @@ public class Go extends JFrame {
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
     private JLabel label4;
-    private JLabel label5;
-    private JScrollPane scrollPane2;
-    private JTextArea textArea2;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }
