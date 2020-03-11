@@ -36,7 +36,7 @@ public class Overview extends JFrame {
             for (int x : stationList) {
                 String name = station.get(x);
                 content += name;
-                content += "---";
+                content += "<-->";
             }
             content = content.substring(0, content.length() - 3);
             content += "\n";

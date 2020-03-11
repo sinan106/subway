@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a48e89d7-9664-4dc3-a7e5-f5230094ac94" name="Default" comment="基本完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controler/Go.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Go.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controler/Go.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Go.jfd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controler/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controler/Menu.jfd" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Menu.jfd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/Overview.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/Overview.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controler/RouteSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/RouteSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/StationSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/StationSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controler/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controler/main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,20 +16,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Menu.jfd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controler/Menu.jfd">
-          <provider selected="true" editor-type-id="JFormDesigner" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="importData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dataProcess/importData.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controler/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="853">
-              <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="57" />
+            <state relative-caret-position="195">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
               <folding>
-                <element signature="e#1412#1413#0" expanded="true" />
-                <element signature="e#1478#1479#0" expanded="true" />
                 <marker date="1583917116414" expanded="false" signature="1533:6457" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
                 <marker date="1583917116414" expanded="false" signature="6469:6764" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
               </folding>
@@ -38,35 +39,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RouteSearch.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RouteSearch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controler/RouteSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="624">
+              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
               <folding>
-                <marker date="1583917243313" expanded="false" signature="1543:5901" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1583917243313" expanded="false" signature="5913:6251" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+                <marker date="1583935031391" expanded="false" signature="1387:5745" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1583935031391" expanded="false" signature="5757:6095" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Go.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controler/Go.java">
+      <file leaf-file-name="StationSearch.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controler/StationSearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1007">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="120">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <marker date="1583917116213" expanded="false" signature="3805:10228" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-                <marker date="1583917116213" expanded="false" signature="10241:10670" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+                <marker date="1583935539448" expanded="false" signature="1661:5693" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+                <marker date="1583935539448" expanded="false" signature="5705:6045" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Go.jfd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controler/Go.jfd">
-          <provider selected="true" editor-type-id="JFormDesigner" />
+      <file leaf-file-name="GoFunc.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dataProcess/GoFunc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controler/main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -88,7 +102,10 @@
         <option value="$PROJECT_DIR$/src/controler/Go.jfd" />
         <option value="$PROJECT_DIR$/src/controler/Go.java" />
         <option value="$PROJECT_DIR$/src/controler/Menu.java" />
+        <option value="$PROJECT_DIR$/src/controler/main.java" />
+        <option value="$PROJECT_DIR$/src/controler/Overview.java" />
         <option value="$PROJECT_DIR$/src/controler/RouteSearch.java" />
+        <option value="$PROJECT_DIR$/src/controler/StationSearch.java" />
       </list>
     </option>
   </component>
@@ -102,9 +119,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="870" />
-    <option name="width" value="1055" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="929" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectId" id="1YCJG74tRN8TbrgKMaBOVXjK2bh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -113,6 +130,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,13 +150,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="controler" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="subway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="subway" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dataProcess" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="subway" type="b2602c69:ProjectViewProjectNode" />
+              <item name="subway" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,7 +179,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -316,7 +344,8 @@
       <workItem from="1583837520611" duration="232000" />
       <workItem from="1583843765159" duration="4506000" />
       <workItem from="1583916780141" duration="143000" />
-      <workItem from="1583916950576" duration="292000" />
+      <workItem from="1583916950576" duration="346000" />
+      <workItem from="1583921333849" duration="4345000" />
     </task>
     <task id="LOCAL-00001" summary="重新写线路查询">
       <created>1583806560167</created>
@@ -357,7 +386,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="292000" />
+    <option name="totallyTimeSpent" value="4691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,34 +401,34 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info id="Image Layers" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32952926" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info id="Capture Tool" />
-      <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17962466" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32952926" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32952926" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18096514" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,14 +487,24 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/controler/Menu.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner" />
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state paletteWidth="0" propertiesWidth="0" structureHeight="0" />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controler/Go.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner" />
+    <entry file="file://$PROJECT_DIR$/src/controler/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="57" />
+          <folding>
+            <marker date="1583917116414" expanded="false" signature="1533:6457" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583917116414" expanded="false" signature="6469:6764" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/Go.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1007">
+        <state relative-caret-position="744">
           <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
           <folding>
             <marker date="1583917116213" expanded="false" signature="3805:10228" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
@@ -474,27 +513,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/Go.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state paletteWidth="0" propertiesWidth="0" structureHeight="0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/RouteSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <marker date="1583935031391" expanded="false" signature="1387:5745" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583935031391" expanded="false" signature="5757:6095" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/Menu.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/Go.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/Go.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <marker date="1583917116213" expanded="false" signature="3805:10228" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583917116213" expanded="false" signature="10241:10670" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProcess/importData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="853">
-          <caret line="57" column="57" lean-forward="true" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="57" />
+        <state relative-caret-position="195">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding>
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1478#1479#0" expanded="true" />
             <marker date="1583917116414" expanded="false" signature="1533:6457" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
             <marker date="1583917116414" expanded="false" signature="6469:6764" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/Overview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <marker date="1583934802704" expanded="false" signature="1289:3687" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583934802704" expanded="false" signature="3700:3949" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controler/RouteSearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+        <state relative-caret-position="624">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
           <folding>
-            <marker date="1583917243313" expanded="false" signature="1543:5901" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
-            <marker date="1583917243313" expanded="false" signature="5913:6251" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <marker date="1583935031391" expanded="false" signature="1387:5745" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583935031391" expanded="false" signature="5757:6095" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/StationSearch.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controler/StationSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <marker date="1583935539448" expanded="false" signature="1661:5693" ph="// JFormDesigner - Component initialization - DO NOT MODIFY" />
+            <marker date="1583935539448" expanded="false" signature="5705:6045" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataProcess/GoFunc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
         </state>
       </provider>
     </entry>

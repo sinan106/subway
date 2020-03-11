@@ -65,10 +65,6 @@ public class StationSearch extends JFrame {
         function();
     }
 
-    private void button1KeyTyped(KeyEvent e) {
-        // TODO add your code here
-    }
-
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents

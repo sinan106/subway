@@ -50,11 +50,8 @@ public class RouteSearch extends JFrame {
 
             index++;
         }
-        if (content.charAt(content.length() - 1) == '\n') {
-            content = content.substring(0, content.length() - 4);
-        } else {
-            content = content.substring(0, content.length() - 3);
-        }
+
+        content = content.substring(0, content.length() - 4);
 
         textArea1.setText(content);
     }
