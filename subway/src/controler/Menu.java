@@ -50,8 +50,12 @@ class Menu extends JFrame {
 
     private void button4MouseClicked(MouseEvent e) {  // 出发！！
 
-        Go frame = new Go(station, route, routeNameList);
+        Go frame = new Go(station, route, routeNameList,goFunc);
         frame.setVisible(true);
+    }
+
+    private void thisWindowOpened(WindowEvent e) {
+        goFunc = new GoFunc(station, route, routeNameList);
     }
 
 
@@ -67,6 +71,12 @@ class Menu extends JFrame {
         setTitle("Menu");
         setBackground(new Color(51, 204, 255));
         setForeground(Color.pink);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowOpened(WindowEvent e) {
+                thisWindowOpened(e);
+            }
+        });
         Container contentPane = getContentPane();
 
         //---- label1 ----
@@ -117,36 +127,36 @@ class Menu extends JFrame {
         GroupLayout contentPaneLayout = new GroupLayout(contentPane);
         contentPane.setLayout(contentPaneLayout);
         contentPaneLayout.setHorizontalGroup(
-                contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addGap(167, 167, 167)
-                                .addComponent(label1, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(165, Short.MAX_VALUE))
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addGap(76, 76, 76)
-                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(button1, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                                        .addComponent(button3, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
-                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
-                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(button2, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                                        .addComponent(button4, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
-                                .addContainerGap(71, Short.MAX_VALUE))
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(167, 167, 167)
+                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 331, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(165, Short.MAX_VALUE))
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addGap(76, 76, 76)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                        .addComponent(button1, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                        .addComponent(button3, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                        .addComponent(button2, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                        .addComponent(button4, GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE))
+                    .addContainerGap(71, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
-                contentPaneLayout.createParallelGroup()
-                        .addGroup(contentPaneLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(label1, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(button1, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(button2, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
-                                .addGap(36, 36, 36)
-                                .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                                        .addComponent(button3, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(button4, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(62, Short.MAX_VALUE))
+            contentPaneLayout.createParallelGroup()
+                .addGroup(contentPaneLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(button1, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button2, GroupLayout.PREFERRED_SIZE, 113, GroupLayout.PREFERRED_SIZE))
+                    .addGap(36, 36, 36)
+                    .addGroup(contentPaneLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(button3, GroupLayout.PREFERRED_SIZE, 121, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button4, GroupLayout.PREFERRED_SIZE, 123, GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(62, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());

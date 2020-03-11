@@ -25,10 +25,11 @@ public class Go extends JFrame {
     private List<String> routeNameList;
     private GoFunc goFunc;
 
-    public Go(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1) {
+    public Go(Map<Integer, String> station1, Map<String, List<Integer>> route1, List<String> routeNameList1, GoFunc goFunc1) {
         station = station1;
         route = route1;
         routeNameList = routeNameList1;
+        goFunc = goFunc1;
 
         initComponents();
     }
@@ -128,10 +129,6 @@ public class Go extends JFrame {
 
     }
 
-    private void thisWindowOpened(WindowEvent e) {
-        goFunc = new GoFunc(station, route, routeNameList);
-    }
-
     private void initComponents() {
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -147,12 +144,6 @@ public class Go extends JFrame {
 
         //======== this ========
         setTitle("Go");
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowOpened(WindowEvent e) {
-                thisWindowOpened(e);
-            }
-        });
         Container contentPane = getContentPane();
 
         //---- label1 ----

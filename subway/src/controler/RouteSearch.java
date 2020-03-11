@@ -43,9 +43,11 @@ public class RouteSearch extends JFrame {
         for (Integer x : stationList) {
             String temp = station.get(x);
             content += temp;
-            content += "---";
             if (index % 4 == 0)
                 content += "\n";
+
+            content += "<-->";
+
             index++;
         }
         if (content.charAt(content.length() - 1) == '\n') {
